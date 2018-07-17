@@ -1,0 +1,20 @@
+﻿<Window x:Class="FinalProject.SearchForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Zoidberg's Search Engine" Height="376" Width="489"
+        Background="{StaticResource WindowBackGround}"
+        Icon="{StaticResource icon}">
+    <Grid Margin="0,0,2,0">
+        <DataGrid x:Name="dgvSearchList" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" IsReadOnly="True" SelectionChanged="DataGrid_SelectionChanged" AutoGenerateColumns="True" ItemsSource="{Binding}" Height="310" Width="216"/>
+        <ComboBox x:Name="cmbInvoiceNumber" HorizontalAlignment="Left" Margin="330,33,0,0" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2"/>
+        <ComboBox x:Name="cmbInvoiceDate" HorizontalAlignment="Left" Margin="330,62,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="cmbInvoiceTotalCharge" HorizontalAlignment="Left" Margin="330,92,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnSearch" Content="Search" HorizontalAlignment="Left" Margin="288,140,0,0" VerticalAlignment="Top" Width="75" Click="btnSearch_Click"/>
+        <Button x:Name="btnClearSearchForm" Content="Reset" HorizontalAlignment="Left" Margin="375,140,0,0" VerticalAlignment="Top" Width="75" Click="btnClearSearchForm_Click"/>
+        <Button x:Name="btnSelectInvoice" IsEnabled="False" Content="Select Invoice" HorizontalAlignment="Left" Margin="288,183,0,0" VerticalAlignment="Top" Width="75" Click="btnSelectInvoice_Click"/>
+        <Label Content="ID:" HorizontalAlignment="Left" Margin="301,33,0,0" VerticalAlignment="Top"/>
+        <Label Content="Date:" HorizontalAlignment="Left" Margin="288,62,0,0" VerticalAlignment="Top"/>
+        <Label Content="Cost:" HorizontalAlignment="Left" Margin="289,88,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
